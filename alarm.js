@@ -105,6 +105,7 @@ function playAlarm(alarmHour,alarmMins)
 		if(currentHour==alarmHour && currentMins==alarmMins && on_off)
 		{
 			alert("Hi!! It's time");
+			onToggle(getTime);
 		}
 	}
 }
