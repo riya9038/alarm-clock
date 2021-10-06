@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>ALARM CLOCK</title>
+    <script src="https://kit.fontawesome.com/00d3e89dba.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="alarm.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+  	<!-- Alarm Clock -->
+  	<div id="container">
+  		<!-- Digital Clock -->
+  		<div id="clock">
+  			<p id="time">8:19:03</p>
+  			<br>
+  			<p id="day"> monday</p>
+  		</div>
+  		<!-- Digital Clock -->
+
+  		<!-- Alarm List -->
+  		<div id="list">
+
+	  		<div id="alarm01" class="set-alarm">
+	  			<span id="new-alarm" onClick="newAlarm('19:42')"> 19:42</span>
+	  			<div id="settings">
+					<div>
+						<input type="checkbox" id="switch1"class="checkbox slider" name="19:42" onClick="onToggle('19:42')"/>
+						<label for="switch1" class="toggle" id="circle"></label>
+				   	</div>
+						<div id="delete" onClick="del('19:42')"> <i class="fas fa-minus-square"></i></div>
+					</div>
+	  		</div>
+
+	  		<div id="alarm01" class="set-alarm">
+	  			<span id="new-alarm" onClick="newAlarm('19:43')"> 19:43</span>
+	  			<div id="settings">
+		  			<div>
+						<input type="checkbox" id="switch2"class="checkbox slider" name="19:43" onClick="onToggle('19:43')" />
+						<label for="switch2" class="toggle" id="circle"></label>
+				   	</div>
+						<div id="delete" onClick="del('19:43')"> <i class="fas fa-minus-square"></i></div>
+					</div>
+	  		</div>
+  		</div>
+  		<!-- Alarm List -->
+
+  		<!-- Button trigger modal -->
+			<button type="button" id="modal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+			  <!-- <i class="fas fa-plus"> -->Set
+			</button>
+			<!-- Button trigger modal -->
+
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLabel"></h5>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			      </div>
+			      <div class="modal-body">
+			        <div class="md-form md-outline">
+						<input type="time" id="default-picker" class="form-control" placeholder="Select time">
+						<label for="default-picker" style="font-family: cursive; margin:10px">Set Time</label>
+					</div>
+			      </div>
+			      <div class="modal-footer">
+			      	<!-- <button id="delete" type="button" class="btn btn-primary" data-bs-dismiss="modal">Delete</button> -->
+			        <button id="save-changes" type="button" class="btn btn-primary" data-bs-dismiss="modal">Done</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- Modal -->
+
+  	</div>
+  	<!-- Alarm Clock -->
+
+  	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  	<script src="alarm.js"></script>
+ 
+  </body>
+</html>
+
